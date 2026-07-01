@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Trendcart – About Us | Our Story & Values</title>
+    <title>Monomart – About Us | Our Story & Values</title>
     <!-- Google Fonts & simple reset -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
     <!-- Font Awesome 6 (free icons) -->
@@ -396,7 +396,7 @@
     <div class="container nav-container">
         <div class="logo">
             <a href="#" id="homeLink" style="text-decoration: none;">
-                <h1>TRENDCART <span>✦ style forward</span></h1>
+                <h1>Monomart <span>✦ style forward</span></h1>
             </a>
         </div>
         <div class="nav-links">
@@ -415,7 +415,7 @@
 <div class="about-hero">
     <div class="container">
         <div class="about-title">Our story begins with you</div>
-        <div class="about-tagline">Trendcart isn't just a destination — it's a movement for self-expression, quality, and timeless design.</div>
+        <div class="about-tagline">Monomart isn't just a destination — it's a movement for self-expression, quality, and timeless design.</div>
         <a href="#" id="backToShopBtn" class="back-link"><i class="fas fa-store"></i> Explore collection</a>
     </div>
 </div>
@@ -425,12 +425,12 @@
     <div class="story-grid">
         <div class="story-text">
             <h2>From a dream to a global style hub</h2>
-            <p>Founded in 2020, Trendcart started as a small collective of designers who believed that fashion should be effortless, sustainable, and inclusive. We set out to break the cycle of fast fashion by curating pieces that blend modern aesthetics with enduring comfort.</p>
-            <p>What began as a local pop-up in New York quickly grew into a beloved online destination thanks to our community. Today, Trendcart delivers to over 40 countries — but our mission remains the same: help you express your unique style without compromise.</p>
+            <p>Founded in 2020, Monomart started as a small collective of designers who believed that fashion should be effortless, sustainable, and inclusive. We set out to break the cycle of fast fashion by curating pieces that blend modern aesthetics with enduring comfort.</p>
+            <p>What began as a local pop-up in New York quickly grew into a beloved online destination thanks to our community. Today, Monomart delivers to over 40 countries — but our mission remains the same: help you express your unique style without compromise.</p>
             <p>Every product on our platform is handpicked for quality, versatility, and ethical production. We work closely with artisans and brands that share our values. Because true style isn't about following trends — it's about feeling confident in what you wear.</p>
         </div>
         <div class="story-image">
-            <img src="https://picsum.photos/id/106/600/500" alt="Trendcart design studio and team working" loading="lazy">
+            <img src="https://picsum.photos/id/106/600/500" alt="Monomart design studio and team working" loading="lazy">
         </div>
     </div>
 </div>
@@ -462,9 +462,9 @@
     </div>
 </div>
 
-<!-- Team / faces behind Trendcart -->
+<!-- Team / faces behind Monomart -->
 <div class="container team-section">
-    <h2 class="section-title">👥 The faces behind Trendcart</h2>
+    <h2 class="section-title">👥 The faces behind Monomart</h2>
     <div class="team-grid">
         <div class="team-member">
             <img class="member-img" src="https://picsum.photos/id/64/180/180" alt="Maya Chen, Founder">
@@ -511,7 +511,7 @@
     <div class="container">
         <div class="footer-content">
             <div class="footer-col">
-                <h4>TRENDCART</h4>
+                <h4>Monomart</h4>
                 <p>Your daily style destination</p>
                 <p><i class="fas fa-map-marker-alt"></i> NYC · London · Tokyo</p>
             </div>
@@ -536,7 +536,7 @@
             </div>
         </div>
         <div class="copyright">
-            © 2026 Trendcart — Style with purpose, every day.
+            © 2026 Monomart — Style with purpose, every day.
         </div>
     </div>
 </footer>
@@ -550,11 +550,11 @@
         if (!badge) return;
         const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
         badge.innerText = totalItems;
-        localStorage.setItem('trendcart_cart', JSON.stringify(cart));
+        localStorage.setItem('Monomart_cart', JSON.stringify(cart));
     }
 
     function loadCartFromStorage() {
-        const stored = localStorage.getItem('trendcart_cart');
+        const stored = localStorage.getItem('Monomart_cart');
         if (stored) {
             try {
                 let parsed = JSON.parse(stored);
@@ -614,7 +614,7 @@
     const newsletterBtn = document.getElementById('newsletterBtn');
     if (newsletterBtn) {
         newsletterBtn.addEventListener('click', () => {
-            alert("📬 Thank you! You'll receive the latest Trendcart stories and offers. (demo interaction)");
+            alert("📬 Thank you! You'll receive the latest Monomart stories and offers. (demo interaction)");
         });
     }
 
@@ -623,13 +623,13 @@
     if (cartIconDiv) {
         cartIconDiv.style.cursor = 'pointer';
         cartIconDiv.addEventListener('click', () => {
-            alert(`🛒 Your Trendcart bag has ${cart.reduce((s,i)=>s+i.quantity,0)} item(s). Head to the homepage to checkout.`);
+            alert(`🛒 Your Monomart bag has ${cart.reduce((s,i)=>s+i.quantity,0)} item(s). Head to the homepage to checkout.`);
         });
     }
 
     // Storage sync (if cart updated from other pages)
     window.addEventListener('storage', (event) => {
-        if (event.key === 'trendcart_cart') {
+        if (event.key === 'Monomart_cart') {
             loadCartFromStorage();
         }
     });
